@@ -29,7 +29,7 @@ export function AbstractGraphic() {
         Abstract network graphic representing connection and pipeline
         building
       </title>
-      <rect width="380" height="320" rx="24" fill="#0B2038" />
+      <rect width="380" height="320" rx="24" fill="#12293F" />
       {edges.map(([from, to], index) => (
         <line
           key={index}
@@ -37,8 +37,8 @@ export function AbstractGraphic() {
           y1={nodes[from].y}
           x2={nodes[to].x}
           y2={nodes[to].y}
-          stroke="#2563EB"
-          strokeOpacity="0.45"
+          stroke="#5E8D89"
+          strokeOpacity="0.5"
           strokeWidth="1.5"
         />
       ))}
@@ -48,10 +48,18 @@ export function AbstractGraphic() {
           cx={node.x}
           cy={node.y}
           r={index === 3 ? 10 : 6}
-          fill={index === 3 ? "#2563EB" : "#F7F4EE"}
+          fill={index === 3 ? "#C96F56" : "#F8F5F0"}
           fillOpacity={index === 3 ? 1 : 0.9}
         />
       ))}
+      <path
+        d="M300 60C305 52 310 58 314 51"
+        stroke="#C96F56"
+        strokeOpacity="0.55"
+        strokeWidth="2"
+        strokeLinecap="round"
+        fill="none"
+      />
     </svg>
   );
 }

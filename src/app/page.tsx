@@ -1,25 +1,21 @@
 import { Hero } from "@/components/Hero";
-import { PerformanceSnapshot } from "@/components/PerformanceSnapshot";
-import { About } from "@/components/About";
+import { MetricsSection } from "@/components/MetricsSection";
+import { WhyMalcomSection } from "@/components/WhyMalcomSection";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
-import { Skills } from "@/components/Skills";
-import { HowISell } from "@/components/HowISell";
-import { TargetIndustries } from "@/components/TargetIndustries";
+import { ToolsSection } from "@/components/ToolsSection";
 import { Education } from "@/components/Education";
-import { Contact } from "@/components/Contact";
+import { FinalCta } from "@/components/FinalCta";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <PerformanceSnapshot />
-      <About />
+      <MetricsSection />
+      <WhyMalcomSection />
       <ExperienceTimeline />
-      <Skills />
-      <HowISell />
-      <TargetIndustries />
+      <ToolsSection />
       <Education />
-      <Contact />
+      <FinalCta />
     </>
   );
 }

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Menu, X, FileDown } from "lucide-react";
 import { navLinks } from "@/data/nav";
 import { personal } from "@/data/personal";
+import { CTAButton } from "@/components/CTAButton";
 
 export function Nav() {
   const [activeHref, setActiveHref] = useState<string>("");
@@ -56,7 +57,7 @@ export function Nav() {
       >
         <a
           href="#top"
-          className="flex items-center gap-2 font-display text-lg font-bold text-navy"
+          className="flex items-center gap-2 text-lg font-bold text-navy"
         >
           <span
             aria-hidden="true"
@@ -73,8 +74,10 @@ export function Nav() {
               <a
                 href={link.href}
                 aria-current={activeHref === link.href ? "true" : undefined}
-                className={`text-sm font-medium transition-colors hover:text-blue ${
-                  activeHref === link.href ? "text-blue" : "text-charcoal/80"
+                className={`text-sm transition-colors hover:text-navy ${
+                  activeHref === link.href
+                    ? "font-semibold text-navy"
+                    : "font-medium text-charcoal/80"
                 }`}
               >
                 {link.label}
@@ -84,14 +87,9 @@ export function Nav() {
         </ul>
 
         <div className="hidden lg:block">
-          <a
-            href={personal.resumeHref}
-            download
-            className="inline-flex items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue"
-          >
-            <FileDown className="h-4 w-4" aria-hidden="true" />
+          <CTAButton href={personal.resumeHref} download icon={FileDown}>
             Resume
-          </a>
+          </CTAButton>
         </div>
 
         <button
@@ -122,10 +120,10 @@ export function Nav() {
                 <a
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className={`block rounded-md px-3 py-3 text-base font-medium ${
+                  className={`block rounded-md px-3 py-3 text-base ${
                     activeHref === link.href
-                      ? "bg-navy/5 text-blue"
-                      : "text-charcoal/80"
+                      ? "bg-navy/5 font-semibold text-navy"
+                      : "font-medium text-charcoal/80"
                   }`}
                 >
                   {link.label}
@@ -133,15 +131,16 @@ export function Nav() {
               </li>
             ))}
           </ul>
-          <a
-            href={personal.resumeHref}
-            download
-            onClick={() => setMenuOpen(false)}
-            className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy px-5 py-3 text-sm font-semibold text-white"
-          >
-            <FileDown className="h-4 w-4" aria-hidden="true" />
-            Download Resume
-          </a>
+          <div className="mt-4">
+            <CTAButton
+              href={personal.resumeHref}
+              download
+              icon={FileDown}
+              className="w-full"
+            >
+              Download Resume
+            </CTAButton>
+          </div>
         </div>
       ) : null}
     </header>

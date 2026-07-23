@@ -17,7 +17,7 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background: "#F7F4EE",
+          background: "#F8F5F0",
           fontFamily: "sans-serif",
         }}
       >
@@ -29,7 +29,7 @@ export default function OpengraphImage() {
             width: 64,
             height: 64,
             borderRadius: 14,
-            background: "#102A43",
+            background: "#183B5B",
             color: "#FFFFFF",
             fontSize: 28,
             fontWeight: 700,
@@ -43,7 +43,7 @@ export default function OpengraphImage() {
             display: "flex",
             fontSize: 68,
             fontWeight: 700,
-            color: "#102A43",
+            color: "#183B5B",
             marginBottom: 16,
           }}
         >
@@ -54,22 +54,21 @@ export default function OpengraphImage() {
             display: "flex",
             fontSize: 36,
             fontWeight: 600,
-            color: "#2563EB",
+            color: "#5E8D89",
             marginBottom: 28,
           }}
         >
-          Sales Development Representative
+          Business Development Representative
         </div>
         <div
           style={{
             display: "flex",
             fontSize: 26,
-            color: "#667085",
+            color: "#6B7785",
             maxWidth: 820,
           }}
         >
-          Building qualified pipeline through thoughtful outreach, discovery,
-          and trusted relationships.
+          Building relationships that create pipeline.
         </div>
       </div>
     ),

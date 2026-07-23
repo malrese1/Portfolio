@@ -9,11 +9,17 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-navy text-white/70">
       <Container className="flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="font-display text-base font-bold text-white">
-            {personal.name}
-          </p>
+          <p className="text-base font-bold text-white">{personal.name}</p>
           <p className="mt-1 text-sm">
             {personal.location} &middot; {personal.region}
+          </p>
+          <p className="mt-1 text-sm">
+            <a
+              href={personal.phoneHref}
+              className="transition-colors hover:text-white"
+            >
+              {personal.phone}
+            </a>
           </p>
         </div>
 

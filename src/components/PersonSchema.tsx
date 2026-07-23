@@ -20,7 +20,7 @@ export function PersonSchema() {
       "@type": "CollegeOrUniversity",
       name: personal.education.school,
     },
-    description: personal.introCopy,
+    description: personal.valueProp,
   };
 
   return (
