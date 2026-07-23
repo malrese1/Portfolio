@@ -5,16 +5,16 @@ type Variant = "primary" | "secondary" | "ghost";
 type Size = "md" | "lg";
 
 const variantStyles: Record<Variant, string> = {
-  primary: "bg-navy text-white hover:opacity-90",
+  primary: "bg-navy text-white shadow-sm hover:shadow-md hover:-translate-y-0.5",
   secondary:
-    "border border-navy/20 bg-transparent text-navy hover:border-navy/40 hover:bg-navy/5",
+    "border border-navy/20 bg-transparent text-navy hover:border-navy/40 hover:bg-navy/5 hover:-translate-y-0.5",
   ghost: "text-navy hover:text-teal",
 };
 
 const variantStylesOnDark: Record<Variant, string> = {
-  primary: "bg-white text-navy hover:opacity-90",
+  primary: "bg-white text-navy shadow-sm hover:shadow-md hover:-translate-y-0.5",
   secondary:
-    "border border-white/30 bg-transparent text-white hover:border-white/50 hover:bg-white/10",
+    "border border-white/30 bg-transparent text-white hover:border-white/50 hover:bg-white/10 hover:-translate-y-0.5",
   ghost: "text-white/80 hover:text-white",
 };
 
@@ -52,7 +52,7 @@ export function CTAButton({
       download={download ? true : undefined}
       target={external ? "_blank" : undefined}
       rel={external ? "noreferrer" : undefined}
-      className={`inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all ${colors} ${sizeStyles[size]} ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 active:scale-[0.97] active:shadow-none active:translate-y-0 ${colors} ${sizeStyles[size]} ${className}`}
     >
       {children}
       {Icon ? <Icon className="h-4 w-4" aria-hidden="true" /> : null}

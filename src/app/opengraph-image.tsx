@@ -64,7 +64,7 @@ export default function OpengraphImage() {
           style={{
             display: "flex",
             fontSize: 26,
-            color: "#6B7785",
+            color: "#635C56",
             maxWidth: 820,
           }}
         >

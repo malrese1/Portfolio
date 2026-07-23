@@ -74,13 +74,29 @@ export function Nav() {
               <a
                 href={link.href}
                 aria-current={activeHref === link.href ? "true" : undefined}
-                className={`text-sm transition-colors hover:text-navy ${
+                className={`group relative inline-block py-1 text-sm transition-colors hover:text-navy ${
                   activeHref === link.href
                     ? "font-semibold text-navy"
                     : "font-medium text-charcoal/80"
                 }`}
               >
                 {link.label}
+                <svg
+                  viewBox="0 0 60 8"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                  className="absolute -bottom-0.5 left-0 h-1.5 w-full text-teal"
+                  fill="none"
+                >
+                  <path
+                    d="M2,5 C15,1 30,7 45,3 C50,2 55,4 58,3"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    pathLength="1"
+                    className="[stroke-dasharray:1] [stroke-dashoffset:1] transition-[stroke-dashoffset] duration-300 ease-out group-hover:[stroke-dashoffset:0]"
+                  />
+                </svg>
               </a>
             </li>
           ))}
