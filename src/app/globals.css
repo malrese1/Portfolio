@@ -5,8 +5,9 @@
   --color-navy: #183b5b;
   --color-teal: #5e8d89;
   --color-coral: #c96f56;
-  --color-charcoal: #1e2a35;
-  --color-muted: #5a6672;
+  --color-mustard: #d6a329;
+  --color-charcoal: #353535;
+  --color-muted: #635c56;
   --color-white: #ffffff;
 }
 
@@ -15,6 +16,7 @@
   --color-navy: var(--color-navy);
   --color-teal: var(--color-teal);
   --color-coral: var(--color-coral);
+  --color-mustard: var(--color-mustard);
   --color-charcoal: var(--color-charcoal);
   --color-muted: var(--color-muted);
   --font-sans: var(--font-inter);
@@ -42,6 +44,20 @@ body {
   background: var(--color-cream);
   color: var(--color-charcoal);
   font-family: var(--font-sans), system-ui, sans-serif;
+  position: relative;
+}
+
+/* Subtle paper-grain texture, carried through from the brand banner.
+   Fixed + pointer-events:none so it never interferes with content or input. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 ::selection {
