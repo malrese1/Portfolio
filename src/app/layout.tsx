@@ -3,6 +3,8 @@ import { Inter, Sora } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { PersonSchema } from "@/components/PersonSchema";
+import { siteUrl } from "@/lib/site";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -14,10 +16,27 @@ const sora = Sora({
   subsets: ["latin"],
 });
 
+const title = "Malcom Johnson | Sales Development Representative";
+const description =
+  "Sales development professional with experience in SaaS, prospecting, discovery, lead qualification, Salesforce, and pipeline generation.";
+
 export const metadata: Metadata = {
-  title: "Malcom Johnson | Sales Development Representative",
-  description:
-    "Sales development professional with experience in SaaS, prospecting, discovery, lead qualification, Salesforce, and pipeline generation.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: siteUrl,
+    siteName: "Malcom Johnson",
+    type: "profile",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({
@@ -31,6 +50,7 @@ export default function RootLayout({
       className={`${inter.variable} ${sora.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-cream text-charcoal">
+        <PersonSchema />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:rounded-md focus:bg-navy focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
