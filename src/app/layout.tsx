@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Sora } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -11,14 +11,9 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const sora = Sora({
-  variable: "--font-sora",
-  subsets: ["latin"],
-});
-
-const title = "Malcom Johnson | Sales Development Representative";
+const title = "Malcom Johnson | Business Development Representative";
 const description =
-  "Sales development professional with experience in SaaS, prospecting, discovery, lead qualification, Salesforce, and pipeline generation.";
+  "Business development professional with SaaS pipeline generation experience — high-volume outbound, consultative discovery, and qualified opportunity creation.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -45,10 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${sora.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-cream text-charcoal">
         <PersonSchema />
         <a
