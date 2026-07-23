@@ -1,69 +1,104 @@
 export interface ExperienceEntry {
   company: string;
-  title: string;
+  role: string;
   location: string;
   dates: string;
   current?: boolean;
-  bullets: string[];
+  emphasis?: boolean;
+  story: string;
+  highlights: string[];
+  impact: string;
+  tools?: string[];
 }
 
 export const experience: ExperienceEntry[] = [
   {
-    company: "VIDA Fitness",
-    title: "Front Desk Associate",
-    location: "Washington, DC",
-    dates: "Current",
-    current: true,
-    bullets: [
-      "Engages prospective members, uncovers fitness goals, explains membership options, and connects qualified prospects with Membership Advisors.",
-      "Builds rapport quickly while handling account, billing, and scheduling questions in a fast-paced luxury fitness environment.",
-      "Partners with Membership Advisors, Personal Trainers, and Operations to create seamless customer handoffs and support retention.",
-    ],
-  },
-  {
     company: "ZoomInfo",
-    title: "Sales Development Representative",
+    role: "Sales Development Representative",
     location: "Remote",
     dates: "January 2022 – June 2022",
-    bullets: [
-      "Recognized four times during the first three months for booking the highest number of qualified product demonstrations on the team.",
-      "Consistently exceeded daily prospecting and lead-qualification expectations across inbound and self-generated opportunities.",
-      "Conducted high-volume phone, email, and LinkedIn outreach while identifying business needs and aligning prospects with relevant solutions.",
-      "Partnered with Account Executives to generate sales-qualified meetings and provide clear context for discovery and follow-up.",
-      "Maintained accurate Salesforce records, activity notes, and opportunity details.",
+    emphasis: true,
+    story:
+      "Malcom worked high-volume outbound at one of the fastest-moving teams in sales technology. He cold-called and multi-channel-outreached his way into enterprise conversations, then used consultative discovery to help prospects identify real business challenges before qualifying them as opportunities and handing them to Account Executives.",
+    highlights: [
+      "High-volume outbound prospecting",
+      "Cold calling",
+      "Multi-channel outreach",
+      "Consultative discovery with enterprise prospects",
+      "Consistently exceeded quota",
     ],
-  },
-  {
-    company: "eXp Realty",
-    title: "Real Estate Agent",
-    location: "Washington, DC",
-    dates: "May 2020 – July 2024",
-    bullets: [
-      "Researched local markets and generated new business through referrals, social media, networking, cold calling, and warm outreach.",
-      "Averaged approximately five qualified meetings per week through consultative discovery and consistent follow-up.",
-      "Qualified buyers and renters, coordinated tours and appointments, and maintained an active pipeline.",
-      "Collaborated with senior agents to advance qualified prospects.",
+    impact:
+      "4× SDR of the Week — built on roughly 80 sales conversations and 75 personalized emails a day, turning that volume into 2–3 qualified opportunities daily.",
+    tools: [
+      "Salesforce",
+      "ZoomInfo Engage",
+      "LinkedIn Sales Navigator",
+      "Gong",
+      "SalesOS",
+      "OperationsOS",
     ],
   },
   {
     company: "Greystar",
-    title: "Lease Renewal Specialist",
+    role: "Lease Renewal Specialist",
     location: "Washington, DC",
     dates: "July 2024 – March 2025",
-    bullets: [
-      "Managed resident renewal conversations, identified needs, addressed objections, and recommended appropriate options.",
-      "Maintained accurate CRM documentation and collaborated across leasing and operations teams to support retention.",
+    story:
+      "Malcom owned renewal conversations for an active resident portfolio — understanding what mattered to each resident, addressing objections directly, and recommending the option that actually fit their situation.",
+    highlights: [
+      "Resident renewal conversations",
+      "Objection handling",
+      "CRM documentation",
+      "Cross-team collaboration with leasing and operations",
     ],
+    impact: "Renewed 60–70% of the residents in his portfolio.",
+  },
+  {
+    company: "VIDA Fitness",
+    role: "Front Desk Associate",
+    location: "Washington, DC",
+    dates: "Current",
+    current: true,
+    story:
+      "Malcom is often the first real conversation a prospective member has. He uncovers what someone actually wants from their membership, walks through the right options, and hands off qualified prospects to Membership Advisors.",
+    highlights: [
+      "Consultative membership conversations",
+      "Goal discovery",
+      "Billing and scheduling support",
+      "Handoffs to Membership Advisors",
+    ],
+    impact:
+      "Averages roughly 250 customer interactions a day in a fast-paced, luxury fitness environment.",
+  },
+  {
+    company: "eXp Realty",
+    role: "Real Estate Agent",
+    location: "Washington, DC",
+    dates: "May 2020 – July 2024",
+    story:
+      "Malcom built his own pipeline from nothing — referrals, social media, cold calling, and warm outreach — in a fully commission-based market where no one hands you a lead list.",
+    highlights: [
+      "Self-generated pipeline",
+      "Referral and network development",
+      "Buyer and renter qualification",
+      "Tour and appointment coordination",
+    ],
+    impact:
+      "Averaged about five qualified meetings a week, consistently, for four years.",
   },
   {
     company: "District of Columbia Public Schools",
-    title: "Teaching Assistant",
+    role: "Teaching Assistant",
     location: "Washington, DC",
     dates: "September 2015 – May 2020",
-    bullets: [
-      "Built trusted relationships with students, families, and faculty while managing competing priorities.",
-      "Developed strong communication, adaptability, coaching, and presentation skills.",
-      "Earned recognition for professionalism and collaboration.",
+    story:
+      "Before sales, Malcom spent five years building relationships with students, families, and faculty — managing competing priorities and communicating clearly with people who all needed something different from him.",
+    highlights: [
+      "Relationship building",
+      "Communication and adaptability",
+      "Recognized for professionalism and collaboration",
     ],
+    impact:
+      "Built the communication foundation that carries into every conversation he has today.",
   },
 ];
