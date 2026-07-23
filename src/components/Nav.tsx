@@ -67,7 +67,7 @@ export function Nav() {
           <span className="hidden sm:inline">{personal.name}</span>
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
@@ -83,7 +83,7 @@ export function Nav() {
           ))}
         </ul>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <a
             href={personal.resumeHref}
             download
@@ -97,7 +97,7 @@ export function Nav() {
         <button
           ref={menuButtonRef}
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-navy md:hidden"
+          className="inline-flex items-center justify-center rounded-md p-2 text-navy lg:hidden"
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -114,7 +114,7 @@ export function Nav() {
       {menuOpen ? (
         <div
           id="mobile-menu"
-          className="border-t border-navy/10 bg-cream px-6 pb-6 md:hidden"
+          className="border-t border-navy/10 bg-cream px-6 pb-6 lg:hidden"
         >
           <ul className="flex flex-col gap-1 pt-4">
             {navLinks.map((link) => (
