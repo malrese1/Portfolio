@@ -1,31 +1,41 @@
+import { BasquiatMark } from "@/components/BasquiatMark";
+
 export function SectionHeading({
   eyebrow,
   title,
   description,
   light = false,
   headingId,
+  accent = false,
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   light?: boolean;
   headingId?: string;
+  accent?: boolean;
 }) {
   return (
     <div className="max-w-2xl">
+      {accent && !eyebrow ? (
+        <BasquiatMark className="mb-3 h-3 w-8 text-coral" />
+      ) : null}
       {eyebrow ? (
-        <p
-          className={`mb-3 text-sm font-semibold tracking-wide uppercase ${
-            light ? "text-blue-300" : "text-blue"
-          }`}
-        >
-          {eyebrow}
-        </p>
+        <div className="mb-3 flex items-center gap-2.5">
+          {accent ? <BasquiatMark className="h-3 w-8 text-coral" /> : null}
+          <p
+            className={`text-sm font-semibold tracking-wide uppercase ${
+              light ? "text-white" : "text-navy"
+            }`}
+          >
+            {eyebrow}
+          </p>
+        </div>
       ) : null}
       <h2
         id={headingId}
-        className={`font-display text-3xl font-bold tracking-tight sm:text-4xl ${
-          light ? "text-white" : "text-charcoal"
+        className={`text-3xl font-bold tracking-tight sm:text-4xl ${
+          light ? "text-white" : "text-navy"
         }`}
       >
         {title}
