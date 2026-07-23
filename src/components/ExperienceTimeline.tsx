@@ -2,6 +2,7 @@ import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ExperienceCard } from "@/components/ExperienceCard";
+import { SketchDivider } from "@/components/SketchDivider";
 import { experience } from "@/data/experience";
 
 export function ExperienceTimeline() {
@@ -9,9 +10,11 @@ export function ExperienceTimeline() {
     <section
       id="experience"
       aria-labelledby="experience-heading"
-      className="border-t border-navy/10 bg-white py-20 sm:py-28"
+      className="bg-white py-20 sm:py-28"
     >
       <Container>
+        <SketchDivider className="mb-10 h-3 w-28 text-navy/25" />
+
         <Reveal>
           <SectionHeading
             eyebrow="Experience"
@@ -21,10 +24,10 @@ export function ExperienceTimeline() {
           />
         </Reveal>
 
-        <ol className="mt-12 space-y-6">
+        <ol className="mt-10 space-y-4">
           {experience.map((entry, index) => (
             <Reveal key={`${entry.company}-${entry.role}`} delay={index * 0.06}>
-              <ExperienceCard entry={entry} />
+              <ExperienceCard entry={entry} isFirst={index === 0} />
             </Reveal>
           ))}
         </ol>

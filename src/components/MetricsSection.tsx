@@ -12,7 +12,7 @@ export function MetricsSection() {
     >
       <Container>
         <Reveal>
-          <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-6 lg:gap-x-8">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-6 lg:gap-x-10 lg:divide-x lg:divide-navy/10">
             {metrics.map((metric) => (
               <MetricCard
                 key={metric.label}

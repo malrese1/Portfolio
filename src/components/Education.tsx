@@ -1,6 +1,7 @@
 import { GraduationCap } from "lucide-react";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
+import { SketchDivider } from "@/components/SketchDivider";
 import { personal } from "@/data/personal";
 
 export function Education() {
@@ -8,9 +9,11 @@ export function Education() {
     <section
       id="education"
       aria-labelledby="education-heading"
-      className="border-t border-navy/10 bg-cream py-16 sm:py-20"
+      className="bg-cream py-16 sm:py-20"
     >
       <Container>
+        <SketchDivider className="mb-10 h-3 w-28 text-navy/25" />
+
         <Reveal>
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-navy/5 text-navy">
