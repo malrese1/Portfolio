@@ -1,6 +1,6 @@
-# Malcom Johnson — Sales Portfolio
+# Malcom Johnson — Business Development Landing Page
 
-A one-page SaaS-style sales portfolio built with Next.js, TypeScript, and Tailwind CSS.
+A one-page, recruiter-focused landing page for Malcom Johnson, built with Next.js, TypeScript, and Tailwind CSS. Designed to read like a product landing page rather than a resume: hero → metrics → why Malcom → experience → tools → education → final CTA.
 
 ## Local setup
 
@@ -48,7 +48,7 @@ Open [src/data/personal.ts](src/data/personal.ts) and update the `linkedinUrl` f
 linkedinUrl: "https://www.linkedin.com/in/REPLACE-WITH-MALCOM-LINKEDIN",
 ```
 
-Replace it with Malcom's real LinkedIn profile URL. This single field powers every LinkedIn link on the site (hero, contact section, footer).
+Replace it with Malcom's real LinkedIn profile URL. This single field powers every "Connect on LinkedIn" link on the site (hero, final CTA, footer).
 
 ## Adding or replacing the headshot
 
@@ -66,7 +66,7 @@ The site expects the resume PDF at:
 public/Malcom_Johnson_SDR_Resume_Okta_Tailored.pdf
 ```
 
-Simply drop the real PDF into the `public/` folder with that exact filename and every "Download Resume" / "Resume" link on the site (nav, hero, mobile menu, contact, footer) will work immediately — no code changes needed. If you want a different filename, update `resumeHref` in [src/data/personal.ts](src/data/personal.ts) to match.
+Simply drop the real PDF into the `public/` folder with that exact filename and every "Download Resume" / "Resume" link on the site (nav, hero, mobile menu, final CTA, footer) will work immediately — no code changes needed. If you want a different filename, update `resumeHref` in [src/data/personal.ts](src/data/personal.ts) to match.
 
 ## Editing content
 
@@ -74,14 +74,14 @@ All copy lives in typed data files under `src/data/`, kept separate from compone
 
 | File | Controls |
 | --- | --- |
-| `src/data/personal.ts` | Name, contact info, headlines, about copy, education, LinkedIn URL, resume path |
-| `src/data/experience.ts` | Career timeline entries (company, title, dates, bullets) |
-| `src/data/skills.ts` | Skill categories and the "How I Sell" principles |
-| `src/data/results.ts` | The four performance-snapshot stat cards |
-| `src/data/industries.ts` | Target industry chips |
+| `src/data/personal.ts` | Name, contact info, headline, tagline, value prop, education, LinkedIn URL, resume path, final CTA copy |
+| `src/data/metrics.ts` | The six product-style metric cards below the hero |
+| `src/data/whyMalcom.ts` | The three "Why Malcom?" strengths (title + paragraph) |
+| `src/data/experience.ts` | Career timeline entries — company, role, dates, story, highlights, business impact, and (for ZoomInfo) tools |
+| `src/data/tools.ts` | Categorized tool stack (CRM, Sales Engagement, Prospecting, etc.) |
 | `src/data/nav.ts` | Sticky nav links |
 
-To add, remove, or reorder an experience entry, edit the `experience` array in `src/data/experience.ts` — the timeline UI re-renders automatically. The same pattern applies to skills, results, and target industries.
+To add, remove, or reorder an experience entry, edit the `experience` array in `src/data/experience.ts` — the timeline UI re-renders automatically. Set `emphasis: true` on an entry to give it the larger, highlighted card treatment (currently used for ZoomInfo). The same pattern applies to metrics, strengths, and tools.
 
 ## Tech stack
 
@@ -96,7 +96,9 @@ To add, remove, or reorder an experience entry, edit the `experience` array in `
 ```
 src/
   app/            Routes, layout, metadata, sitemap, robots, generated icon/OG image
-  components/      UI sections (Hero, ExperienceTimeline, Contact, etc.)
+  components/      Section components (Hero, ExperienceTimeline, FinalCta, etc.)
+                    plus reusable primitives (CTAButton, MetricCard, ExperienceCard,
+                    SectionHeading, BasquiatMark)
   data/            Typed content — the single source of truth for all copy
   lib/             Small shared utilities (site URL)
 ```
