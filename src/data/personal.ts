@@ -1,10 +1,7 @@
 export const personal = {
   name: "Malcom Johnson",
   initials: "MJ",
-  location: "National Harbor, Maryland",
-  region: "Washington, DC metropolitan area",
-  availability:
-    "Available for DC-area onsite/hybrid and eligible US remote roles",
+  location: "Washington, DC Metro Area",
   phone: "(786) 547-9865",
   phoneHref: "tel:+17865479865",
   email: "malcom7johnson@gmail.com",

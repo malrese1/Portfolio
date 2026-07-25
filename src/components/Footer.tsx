@@ -10,9 +10,7 @@ export function Footer() {
       <Container className="flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="text-base font-bold text-white">{personal.name}</p>
-          <p className="mt-1 text-sm">
-            {personal.location} &middot; {personal.region}
-          </p>
+          <p className="mt-1 text-sm">{personal.location}</p>
           <p className="mt-1 text-sm">
             <a
               href={personal.phoneHref}

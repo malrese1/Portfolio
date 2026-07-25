@@ -12,8 +12,8 @@ export function PersonSchema() {
     telephone: personal.phone,
     address: {
       "@type": "PostalAddress",
-      addressLocality: personal.location,
-      addressRegion: "MD",
+      addressLocality: "Washington",
+      addressRegion: "DC",
       addressCountry: "US",
     },
     alumniOf: {

@@ -40,7 +40,7 @@ export function Hero() {
 
           <p className="mt-6 inline-flex items-center gap-1.5 text-sm text-muted dark:text-cream/60">
             <MapPin className="h-4 w-4" aria-hidden="true" />
-            {personal.location} &middot; {personal.availability}
+            {personal.location}
           </p>
         </div>
 
