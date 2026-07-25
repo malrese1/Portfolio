@@ -1,6 +1,8 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
+import { BrushStroke } from "@/components/BrushStroke";
+import { DotGrid } from "@/components/DotGrid";
 import { toolCategories } from "@/data/tools";
 
 export function ToolsSection() {
@@ -8,14 +10,29 @@ export function ToolsSection() {
     <section
       id="tools"
       aria-labelledby="tools-heading"
-      className="border-t border-navy/10 bg-cream py-20 sm:py-28 dark:border-cream/10 dark:bg-charcoal"
+      className="relative overflow-hidden border-t border-navy/10 bg-cream py-20 sm:py-28 dark:border-cream/10 dark:bg-charcoal"
     >
-      <Container>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 hidden lg:block"
+      >
+        <div className="absolute top-10 -right-16 h-52 w-96 rotate-3 opacity-[0.07] dark:opacity-[0.02]">
+          <BrushStroke color="coral" className="h-full w-full" />
+        </div>
+        <DotGrid
+          rows={4}
+          cols={6}
+          className="absolute top-6 right-8 text-navy/15 dark:text-cream/15"
+        />
+      </div>
+
+      <Container className="relative z-10">
         <Reveal>
           <SectionHeading
             eyebrow="Tools"
             title="What he works in"
             headingId="tools-heading"
+            accent
           />
         </Reveal>
 

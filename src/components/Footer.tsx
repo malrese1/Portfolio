@@ -1,13 +1,19 @@
 import { ExternalLink, Mail, FileDown } from "lucide-react";
 import { Container } from "@/components/Container";
+import { DotGrid } from "@/components/DotGrid";
 import { personal } from "@/data/personal";
 
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/10 bg-navy text-white/70">
-      <Container className="flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-navy text-white/70">
+      <DotGrid
+        rows={4}
+        cols={4}
+        className="pointer-events-none absolute top-6 right-6 hidden text-cream/10 sm:block"
+      />
+      <Container className="relative z-10 flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="text-base font-bold text-white">{personal.name}</p>
           <p className="mt-1 text-sm">{personal.location}</p>

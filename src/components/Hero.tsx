@@ -2,13 +2,39 @@ import { ExternalLink, MapPin } from "lucide-react";
 import { Container } from "@/components/Container";
 import { CTAButton } from "@/components/CTAButton";
 import { MetricCard } from "@/components/MetricCard";
+import { BrushStroke } from "@/components/BrushStroke";
+import { DotGrid } from "@/components/DotGrid";
+import { BasquiatMark } from "@/components/BasquiatMark";
 import { personal } from "@/data/personal";
 import { metrics } from "@/data/metrics";
 
 export function Hero() {
   return (
-    <section id="top" className="bg-cream pt-16 pb-16 sm:pt-24 sm:pb-20 dark:bg-charcoal">
-      <Container>
+    <section
+      id="top"
+      className="relative overflow-hidden bg-cream pt-16 pb-16 sm:pt-24 sm:pb-20 dark:bg-charcoal"
+    >
+      {/* Background texture filling the space freed up when the hero
+          illustration was removed — brand color washes, not new artwork. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 hidden lg:block"
+      >
+        <div className="absolute top-0 right-[-4rem] h-72 w-[28rem] rotate-6 opacity-[0.09] dark:opacity-[0.025]">
+          <BrushStroke color="mustard" className="h-full w-full" />
+        </div>
+        <div className="absolute top-40 right-10 h-56 w-80 -rotate-3 opacity-[0.08] dark:opacity-[0.02]">
+          <BrushStroke color="teal" className="h-full w-full" />
+        </div>
+        <BasquiatMark className="absolute top-8 right-24 h-3 w-10 text-coral/40 dark:text-coral/50" />
+        <DotGrid
+          rows={5}
+          cols={5}
+          className="absolute right-16 bottom-6 text-navy/15 dark:text-cream/15"
+        />
+      </div>
+
+      <Container className="relative z-10">
         <div className="max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-navy sm:text-5xl lg:text-6xl dark:text-cream">
             {personal.name}
