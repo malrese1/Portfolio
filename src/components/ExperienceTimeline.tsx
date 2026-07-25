@@ -1,9 +1,15 @@
+import { Target, KeyRound, Dumbbell, Home, GraduationCap } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { SketchDivider } from "@/components/SketchDivider";
 import { experience } from "@/data/experience";
+
+// One visual anchor per role, in experience.ts order, so a skimming
+// eye can tell entries apart without reading the full text.
+const icons: LucideIcon[] = [Target, KeyRound, Dumbbell, Home, GraduationCap];
 
 export function ExperienceTimeline() {
   return (
@@ -27,7 +33,11 @@ export function ExperienceTimeline() {
         <ol className="mt-10 space-y-4">
           {experience.map((entry, index) => (
             <Reveal key={`${entry.company}-${entry.role}`} delay={index * 0.06}>
-              <ExperienceCard entry={entry} isFirst={index === 0} />
+              <ExperienceCard
+                entry={entry}
+                icon={icons[index] ?? Target}
+                isFirst={index === 0}
+              />
             </Reveal>
           ))}
         </ol>
