@@ -25,7 +25,7 @@ export function SectionHeading({
           {accent ? <BasquiatMark className="h-3 w-8 text-coral" /> : null}
           <p
             className={`text-sm font-semibold tracking-wide uppercase ${
-              light ? "text-white" : "text-navy"
+              light ? "text-white" : "text-navy dark:text-cream"
             }`}
           >
             {eyebrow}
@@ -35,7 +35,7 @@ export function SectionHeading({
       <h2
         id={headingId}
         className={`text-3xl font-bold tracking-tight sm:text-4xl ${
-          light ? "text-white" : "text-navy"
+          light ? "text-white" : "text-navy dark:text-cream"
         }`}
       >
         {title}
@@ -43,7 +43,7 @@ export function SectionHeading({
       {description ? (
         <p
           className={`mt-4 text-lg leading-relaxed ${
-            light ? "text-white/70" : "text-muted"
+            light ? "text-white/70" : "text-muted dark:text-cream/70"
           }`}
         >
           {description}

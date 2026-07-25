@@ -16,10 +16,10 @@ export function ExperienceTimeline() {
     <section
       id="experience"
       aria-labelledby="experience-heading"
-      className="bg-white py-20 sm:py-28"
+      className="bg-white py-20 sm:py-28 dark:bg-charcoal"
     >
       <Container>
-        <SketchDivider className="mb-10 h-3 w-28 text-navy/25" />
+        <SketchDivider className="mb-10 h-3 w-28 text-navy/25 dark:text-cream/25" />
 
         <Reveal>
           <SectionHeading

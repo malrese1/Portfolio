@@ -7,8 +7,8 @@ type Size = "md" | "lg";
 const variantStyles: Record<Variant, string> = {
   primary: "bg-navy text-white shadow-sm hover:shadow-md hover:-translate-y-0.5",
   secondary:
-    "border border-navy/20 bg-transparent text-navy hover:border-navy/40 hover:bg-navy/5 hover:-translate-y-0.5",
-  ghost: "text-navy hover:text-teal",
+    "border border-navy/20 bg-transparent text-navy hover:border-navy/40 hover:bg-navy/5 hover:-translate-y-0.5 dark:border-cream/25 dark:text-cream dark:hover:border-cream/40 dark:hover:bg-cream/10",
+  ghost: "text-navy hover:text-teal dark:text-cream dark:hover:text-teal",
 };
 
 const variantStylesOnDark: Record<Variant, string> = {

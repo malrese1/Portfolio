@@ -30,9 +30,9 @@ export function ExperienceCard({
     <li
       className={
         emphasis
-          ? "relative -mx-4 rounded-2xl border border-teal/25 bg-white p-4 shadow-sm transition-shadow duration-200 hover:shadow-md sm:-mx-6 sm:p-9"
-          : `relative -mx-4 rounded-2xl px-4 py-8 transition-all duration-200 hover:bg-white hover:shadow-md sm:-mx-6 sm:px-6 sm:py-9 ${
-              isFirst ? "" : "border-t border-navy/10"
+          ? "relative -mx-4 rounded-2xl border border-teal/25 bg-white p-4 shadow-sm transition-shadow duration-200 hover:shadow-md sm:-mx-6 sm:p-9 dark:border-teal/30 dark:bg-white/5 dark:shadow-none dark:hover:shadow-none dark:hover:ring-1 dark:hover:ring-cream/10"
+          : `relative -mx-4 rounded-2xl px-4 py-8 transition-all duration-200 hover:bg-white hover:shadow-md sm:-mx-6 sm:px-6 sm:py-9 dark:hover:bg-white/5 dark:hover:shadow-none dark:hover:ring-1 dark:hover:ring-cream/10 ${
+              isFirst ? "" : "border-t border-navy/10 dark:border-cream/10"
             }`
       }
     >
@@ -44,7 +44,7 @@ export function ExperienceCard({
         <IconBadge icon={icon} />
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <h3 className="text-2xl font-bold tracking-tight text-navy">
+            <h3 className="text-2xl font-bold tracking-tight text-navy dark:text-cream">
               {role}
             </h3>
             {current ? (
@@ -53,11 +53,11 @@ export function ExperienceCard({
               </span>
             ) : null}
           </div>
-          <p className="mt-1.5 text-sm font-bold tracking-wide text-navy/80 uppercase">
+          <p className="mt-1.5 text-sm font-bold tracking-wide text-navy/80 uppercase dark:text-cream/80">
             {company}
           </p>
 
-          <div className="mt-2.5 flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted">
+          <div className="mt-2.5 flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted dark:text-cream/60">
             <span className="inline-flex items-center gap-1.5">
               <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
               {location}
@@ -68,33 +68,33 @@ export function ExperienceCard({
             </span>
           </div>
 
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-charcoal/85">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-charcoal/85 dark:text-cream/85">
             {story}
           </p>
 
           <ul className="mt-5 flex flex-wrap gap-2">
             {highlights.map((highlight) => (
               <li key={highlight}>
-                <span className="inline-flex rounded-full border border-navy/15 px-3 py-1 text-xs font-medium text-navy/75">
+                <span className="inline-flex rounded-full border border-navy/15 px-3 py-1 text-xs font-medium text-navy/75 dark:border-cream/20 dark:text-cream/75">
                   {highlight}
                 </span>
               </li>
             ))}
           </ul>
 
-          <p className="mt-5 max-w-2xl border-l-2 border-coral pl-4 text-base leading-relaxed font-medium text-charcoal">
+          <p className="mt-5 max-w-2xl border-l-2 border-coral pl-4 text-base leading-relaxed font-medium text-charcoal dark:text-cream">
             {impact}
           </p>
 
           {tools && tools.length > 0 ? (
-            <div className="mt-6 border-t border-navy/10 pt-5">
-              <p className="mb-2.5 text-xs font-semibold tracking-wide text-muted uppercase">
+            <div className="mt-6 border-t border-navy/10 pt-5 dark:border-cream/10">
+              <p className="mb-2.5 text-xs font-semibold tracking-wide text-muted uppercase dark:text-cream/60">
                 Tools
               </p>
               <ul className="flex flex-wrap gap-2">
                 {tools.map((tool) => (
                   <li key={tool}>
-                    <span className="inline-flex rounded-full border border-navy/15 px-3 py-1 text-xs font-medium text-navy/80">
+                    <span className="inline-flex rounded-full border border-navy/15 px-3 py-1 text-xs font-medium text-navy/80 dark:border-cream/20 dark:text-cream/80">
                       {tool}
                     </span>
                   </li>
