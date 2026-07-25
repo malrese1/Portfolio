@@ -19,9 +19,9 @@ export const experience: ExperienceEntry[] = [
     dates: "January 2022 – June 2022",
     emphasis: true,
     story:
-      "Malcom worked high-volume outbound at one of the fastest-moving teams in sales technology. He cold-called and multi-channel-outreached his way into enterprise conversations, then used consultative discovery to help prospects identify real business challenges before qualifying them as opportunities and handing them to Account Executives.",
+      "Malcom supported the early stages of the sales cycle across inbound and outbound pipeline at one of the fastest-moving teams in sales technology. He worked inbound-qualified leads alongside self-sourced outbound prospecting — cold calling, multi-channel outreach, and consultative discovery — to help prospects identify real business challenges before qualifying them as opportunities and handing them to Account Executives.",
     highlights: [
-      "High-volume outbound prospecting",
+      "Inbound and outbound pipeline coverage",
       "Cold calling",
       "Multi-channel outreach",
       "Consultative discovery with enterprise prospects",
