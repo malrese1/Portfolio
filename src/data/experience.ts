@@ -55,20 +55,21 @@ export const experience: ExperienceEntry[] = [
   },
   {
     company: "VIDA Fitness",
-    role: "Front Desk Associate",
+    role: "Fitness Sales",
     location: "Washington, DC",
     dates: "Current",
     current: true,
     story:
-      "Malcom is often the first real conversation a prospective member has. He uncovers what someone actually wants from their membership, walks through the right options, and hands off qualified prospects to Membership Advisors.",
+      "Malcom builds rapport with prospective members, uncovers their goals, and qualifies opportunities through consultative conversations. He goes beyond his core responsibilities to schedule facility tours and proactively generate membership sales — introducing membership options, personal training, and additional services based on what each person actually needs. He thrives in a fast-paced, relationship-driven environment where responsiveness and customer experience are critical.",
     highlights: [
       "Consultative membership conversations",
       "Goal discovery",
-      "Billing and scheduling support",
-      "Handoffs to Membership Advisors",
+      "Facility tours",
+      "Proactive membership sales",
+      "Partners with Membership Advisors, Personal Trainers, and Operations",
     ],
     impact:
-      "Averages roughly 250 customer interactions a day in a fast-paced, luxury fitness environment.",
+      "Serves as one of the first points of contact for roughly 250 members and prospective members a day.",
   },
   {
     company: "eXp Realty",
