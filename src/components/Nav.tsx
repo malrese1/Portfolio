@@ -5,6 +5,7 @@ import { Menu, X, FileDown } from "lucide-react";
 import { navLinks } from "@/data/nav";
 import { personal } from "@/data/personal";
 import { CTAButton } from "@/components/CTAButton";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Nav() {
   const [activeHref, setActiveHref] = useState<string>("");
@@ -50,14 +51,14 @@ export function Nav() {
   }, [menuOpen]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-navy/10 bg-cream/90 backdrop-blur supports-[backdrop-filter]:bg-cream/80">
+    <header className="sticky top-0 z-50 border-b border-navy/10 bg-cream/90 backdrop-blur supports-[backdrop-filter]:bg-cream/80 dark:border-cream/10 dark:bg-charcoal/90">
       <nav
         aria-label="Primary"
         className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 sm:px-8"
       >
         <a
           href="#top"
-          className="flex items-center gap-2 text-lg font-bold text-navy"
+          className="flex items-center gap-2 text-lg font-bold text-navy dark:text-cream"
         >
           <span
             aria-hidden="true"
@@ -74,10 +75,10 @@ export function Nav() {
               <a
                 href={link.href}
                 aria-current={activeHref === link.href ? "true" : undefined}
-                className={`group relative inline-block py-1 text-sm transition-colors hover:text-navy ${
+                className={`group relative inline-block py-1 text-sm transition-colors hover:text-navy dark:hover:text-cream ${
                   activeHref === link.href
-                    ? "font-semibold text-navy"
-                    : "font-medium text-charcoal/80"
+                    ? "font-semibold text-navy dark:text-cream"
+                    : "font-medium text-charcoal/80 dark:text-cream/80"
                 }`}
               >
                 {link.label}
@@ -102,33 +103,37 @@ export function Nav() {
           ))}
         </ul>
 
-        <div className="hidden lg:block">
-          <CTAButton href={personal.resumeHref} download icon={FileDown}>
-            Resume
-          </CTAButton>
-        </div>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <ThemeToggle />
 
-        <button
-          ref={menuButtonRef}
-          type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-navy lg:hidden"
-          aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          onClick={() => setMenuOpen((open) => !open)}
-        >
-          {menuOpen ? (
-            <X className="h-6 w-6" aria-hidden="true" />
-          ) : (
-            <Menu className="h-6 w-6" aria-hidden="true" />
-          )}
-        </button>
+          <div className="hidden lg:block">
+            <CTAButton href={personal.resumeHref} download icon={FileDown}>
+              Resume
+            </CTAButton>
+          </div>
+
+          <button
+            ref={menuButtonRef}
+            type="button"
+            className="inline-flex items-center justify-center rounded-md p-2 text-navy lg:hidden dark:text-cream"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            {menuOpen ? (
+              <X className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            )}
+          </button>
+        </div>
       </nav>
 
       {menuOpen ? (
         <div
           id="mobile-menu"
-          className="border-t border-navy/10 bg-cream px-6 pb-6 lg:hidden"
+          className="border-t border-navy/10 bg-cream px-6 pb-6 lg:hidden dark:border-cream/10 dark:bg-charcoal"
         >
           <ul className="flex flex-col gap-1 pt-4">
             {navLinks.map((link) => (
@@ -138,8 +143,8 @@ export function Nav() {
                   onClick={() => setMenuOpen(false)}
                   className={`block rounded-md px-3 py-3 text-base ${
                     activeHref === link.href
-                      ? "bg-navy/5 font-semibold text-navy"
-                      : "font-medium text-charcoal/80"
+                      ? "bg-navy/5 font-semibold text-navy dark:bg-cream/10 dark:text-cream"
+                      : "font-medium text-charcoal/80 dark:text-cream/80"
                   }`}
                 >
                   {link.label}
