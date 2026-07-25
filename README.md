@@ -63,7 +63,7 @@ The hero currently uses an abstract network graphic ([src/components/AbstractGra
 The site expects the resume PDF at:
 
 ```
-public/Malcom_Johnson_SDR_Resume_Okta_Tailored.pdf
+public/Malcom_Johnson_BDR_Resume.pdf
 ```
 
 Simply drop the real PDF into the `public/` folder with that exact filename and every "Download Resume" / "Resume" link on the site (nav, hero, mobile menu, final CTA, footer) will work immediately — no code changes needed. If you want a different filename, update `resumeHref` in [src/data/personal.ts](src/data/personal.ts) to match.

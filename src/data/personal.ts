@@ -8,7 +8,7 @@ export const personal = {
   emailHref: "mailto:malcom7johnson@gmail.com",
   // TODO: Replace with Malcom's final LinkedIn profile URL.
   linkedinUrl: "https://www.linkedin.com/in/REPLACE-WITH-MALCOM-LINKEDIN",
-  resumeHref: "/Malcom_Johnson_SDR_Resume_Okta_Tailored.pdf",
+  resumeHref: "/Malcom_Johnson_BDR_Resume.pdf",
   primaryHeadline: "Business Development Representative",
   tagline: "Building relationships that create inbound and outbound pipeline.",
   valueProp:
