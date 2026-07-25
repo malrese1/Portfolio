@@ -7,7 +7,7 @@ export const strengths: Strength[] = [
   {
     title: "Relationship Builder",
     description:
-      "Malcom builds trust quickly. Prospects, customers, and colleagues tend to open up to him early, which shortens the distance between a first conversation and a real relationship.",
+      "Malcom builds trust quickly. Prospects, customers, and colleagues tend to open up to him early, which shortens the distance between a first conversation and a real relationship. He's built that same instinct outside of work too, mentoring youth with Our Kids of Miami-Dade/Monroe, Inc. from 2012 to 2014.",
   },
   {
     title: "Consultative Seller",
