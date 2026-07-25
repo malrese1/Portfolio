@@ -10,4 +10,5 @@ export const metrics: Metric[] = [
   { value: "2–3", label: "Qualified Opportunities / Day" },
   { value: "250", label: "Customer Interactions / Day" },
   { value: "60–70%", label: "Lease Renewal Rate" },
+  { value: "Inbound + Outbound", label: "Full-Cycle Pipeline" },
 ];
