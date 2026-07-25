@@ -20,6 +20,13 @@ export const personal = {
     degree: "B.S. Business Administration",
     school: "City College Miami",
   },
+  certifications: [
+    {
+      name: "Customer Success Manager (Foundations Certificate)",
+      issuer: "Aspireship",
+      date: "Issued April 2025",
+    },
+  ],
   finalCta: {
     headline: "Let's build something great.",
     copy: "Whether you're looking for someone to generate pipeline, qualify opportunities, or build meaningful customer relationships, I'd love to connect.",
