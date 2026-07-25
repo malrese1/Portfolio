@@ -13,9 +13,9 @@ export const personal = {
   linkedinUrl: "https://www.linkedin.com/in/REPLACE-WITH-MALCOM-LINKEDIN",
   resumeHref: "/Malcom_Johnson_SDR_Resume_Okta_Tailored.pdf",
   primaryHeadline: "Business Development Representative",
-  tagline: "Building relationships that create pipeline.",
+  tagline: "Building relationships that create inbound and outbound pipeline.",
   valueProp:
-    "Business Development professional with 2+ years of SaaS business development experience and 6+ years of consultative sales experience helping organizations solve business problems through meaningful conversations.",
+    "Business Development professional with SaaS experience at ZoomInfo across inbound and outbound pipeline generation, backed by 6+ years of consultative sales experience helping organizations solve business problems through meaningful conversations.",
   education: {
     degree: "B.S. Business Administration",
     school: "City College Miami",
