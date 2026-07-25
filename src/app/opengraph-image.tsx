@@ -68,7 +68,7 @@ export default function OpengraphImage() {
             maxWidth: 820,
           }}
         >
-          Building relationships that create pipeline.
+          Building relationships that create inbound and outbound pipeline.
         </div>
       </div>
     ),

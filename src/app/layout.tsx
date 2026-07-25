@@ -13,7 +13,7 @@ const inter = Inter({
 
 const title = "Malcom Johnson | Business Development Representative";
 const description =
-  "Business development professional with SaaS pipeline generation experience — high-volume outbound, consultative discovery, and qualified opportunity creation.";
+  "Business development professional with SaaS experience across inbound and outbound pipeline — consultative discovery and qualified opportunity creation.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
