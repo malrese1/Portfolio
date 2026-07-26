@@ -14,9 +14,8 @@ type Theme = "light" | "dark";
 interface ThemeContextValue {
   theme: Theme;
   toggleTheme: () => void;
-  /** False until the client has synced with the DOM class the
-   *  no-flash boot script already applied. Used to avoid rendering a
-   *  toggle icon that might briefly mismatch the real theme. */
+  /** False until the client has mounted. Used to avoid rendering a
+   *  toggle icon before hydration completes. */
   mounted: boolean;
 }
 
